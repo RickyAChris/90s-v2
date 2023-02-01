@@ -1,16 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="container">
             <div className="resident_banner">
-                <img src="https://www.eklecty-city.fr/wp-content/uploads/2012/09/Resident-Evil-2-1998-Banner-01.jpg" className="background-img" alt="Cover photo for Resident Evil 2"/>
+                <img src="https://www.eklecty-city.fr/wp-content/uploads/2012/09/Resident-Evil-2-1998-Banner-01.jpg" className="background-img" alt="Resident Evil 2 cover art"/>
             </div>
             <div className="capcom_price">
                 <section>
-                    <p className="info"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/archive/c/cb/20200920122730%21ESRB_2013_Mature.svg/88px-ESRB_2013_Mature.svg.png" style={{"width":"25px", "height":"30px"}}/> Warning! Rated M for Mature Audiences Only!
+                    <p className="info"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/archive/c/cb/20200920122730%21ESRB_2013_Mature.svg/88px-ESRB_2013_Mature.svg.png" style={{"width":"25px", "height":"30px"}} alt="ESRB Mature Rating"/> Warning! Rated M for Mature Audiences Only!
                     <br/>
                         Purchase Price: $50.00 USD
                     </p>
@@ -40,10 +39,15 @@ function App() {
             </div>
       </div>  
 
-      // inline styles are set using a json object Ex: from HTML/CSS **style="text-align:left";** -- becomes **style={{"textAlign":"left"}}** // use , to seperate inline style declarations
-      // Hyphenated css attributes become camel case in JSX. Ex: text-align becomes textAlign
+      // Inline styles are set using a json object Ex: from HTML/CSS **style="text-align:left";** -- becomes **style={{"textAlign":"left"}}** // use , to seperate inline style declarations
+      // Hyphenated css attributes become camelcase in JSX. Ex: text-align becomes textAlign
       // CSS class syntax for JSX is to change, for example, class="container" is to edit class and add Name to it. className="container"
       // Self closing html elements, like <br> or <img>, add a '/' at the end to close the element. For instance, <img/> or <br/> 
+
+      // npx create-react-app nameOfApp --template=typescript // This will create the necessary folder, nameofApp, with the necessary packages and environment
+      // npm run deploy // 
+      // npm run start // Starts the local dev reload server // This allows you to see project code, that has been saved, load immediately
+      // npm run build // Creates the static files
   )
 }
 
