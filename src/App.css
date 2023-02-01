@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+*{
   color: white;
+  margin:0;
+  padding:0;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+  height: auto;
+  width: 100vw;
+  background-color:black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+img.background-img{
+  width: 100%; 
+}
+
+img.promo{
+  padding:0;
+  margin:0;
+  width:40%;
+}
+
+h1{
+  padding:0;
+  margin:0;
+  color: red;
+  font-family: Nosifer;
+  font-size: 3.5rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: .9rem;
+  border-bottom: solid 1px white;
+  padding: 5px;
+}
+
+p.info {
+  text-align: center;
+  font-size: 1.2rem;
+  color: red;
+  text-shadow: 1px 1px darkgray;
+  padding: 10px;
+}
+
+p.main {
+  text-align:center;
+  font-size: 1rem;
+  text-shadow: 1px 1px red;
+}
+
+.container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: .7fr 0.15fr 1fr 1fr 0.1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+      "resident_banner resident_banner resident_banner"
+      "capcom_price capcom_price capcom_price"
+      "Promo-1 Promo-1 Promo-1"
+      "Promo-2 Promo-2 Promo-2"
+      "copyright copyright copyright";
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+.resident_banner { 
+  grid-area: resident_banner; 
+  border-bottom: solid 1px white;
+}
+
+.capcom_price { 
+  grid-area: capcom_price;
+}
+
+.Promo-1 { 
+  display:grid;
+  grid-area: Promo-1; 
+  border-bottom: solid 1px white;
+  place-items:center;
+}
+
+.Promo-2 { 
+  grid-area: Promo-2; 
+  border-bottom: solid 1px white;
+}
+
+.copyright { 
+  display:grid;
+  grid-area: copyright; 
+  place-items:center;
 }
